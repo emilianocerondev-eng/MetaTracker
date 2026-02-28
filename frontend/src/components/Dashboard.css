@@ -1,0 +1,136 @@
+:root {
+    --bg-primary: #f8fbff;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --accent-blue: #007bff;
+    --input-bg: #ffffff;
+    --modal-overlay: rgba(15, 23, 42, 0.45);
+    /* Nuevas variables para los badges/iconos */
+    --badge-bg: #f1f5f9;
+    --icon-bg: #ffffff;
+}
+
+[data-theme='dark'] {
+    --bg-primary: #000000;
+    --card-bg: #1c1c1e;
+    --text-main: #ffffff;
+    --text-muted: #a1a1a6;
+    --border-color: #2c2c2e;
+    --accent-blue: #0a84ff;
+    --input-bg: #2c2c2e;
+    --modal-overlay: rgba(0, 0, 0, 0.75);
+    --badge-bg: #2c2c2e;
+    --icon-bg: #3a3a3c;
+}
+
+.dashboard-container {
+    padding: 40px;
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Títulos y Textos */
+.header-info h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.header-info p, .meta-desc, .amounts, .progress-info, .fecha-texto {
+    color: var(--text-muted);
+}
+
+/* Tarjetas */
+.card-meta {
+    background: var(--card-bg);
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.card-header h3 {
+    color: var(--text-main);
+    margin: 0;
+}
+
+/* Progreso */
+.progress-container {
+    background-color: var(--border-color); /* Se confunde con el borde en light, pero destaca en dark */
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--accent-blue);
+}
+
+/* Badges (Faltante y Semanal) */
+.badge {
+    background-color: var(--badge-bg);
+    padding: 14px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.badge-icon {
+    background-color: var(--icon-bg);
+    border: 1px solid var(--border-color);
+    color: var(--accent-blue);
+}
+
+.badge-value {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+/* Inputs y Formularios */
+.form-registro input, .form-registro select, .modal-form input {
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* Botón de tema (Sol/Luna) */
+.btn-theme {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modales */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--modal-overlay);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-container {
+    background: var(--card-bg);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    width: 520px;
+    border-radius: 20px;
+    padding: 28px;
+}
